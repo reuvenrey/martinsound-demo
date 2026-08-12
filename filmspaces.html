@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styleSheet.css">
+        <link rel="icon" type="image/x-icon" href="graphics/webfavicon.ico">
+
+        <!-- Custom Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Limelight&family=Roboto:ital@0;1&display=swap" rel="stylesheet">
+
+        <!-- page info -->
+        <title>Film Spaces | Martinsound</title>
+
+    </head>
+
+    <style>
+        
+    </style>
+
+    <body>
+        <div id="pageLoader"></div>
+        <div id="header"></div>
+
+        <!-- \/ Body Content -->
+         <div class="container">
+            <h1>Film Spaces</h1>
+            Explore our diverse selection of practical and standing sets. Many of our sets feature a unique 70s/80s asthetic and our newest set features a detailed subway train interior and station platform.
+        </div>
+        
+        <div class="container">
+            <div class="filmTileContainer" id="filmDivCont">
+                <div class="filmTile">
+                    <img src="https://www.martinsound.com/wp-content/uploads/2020/03/DSC00042-1024x576.jpg">
+                    <div>
+                        <h2>Abandonded Apartment</h2>
+                        A 1970s vintage apartment.
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+        <!-- /\ End of Body Content -->
+        <div id="footer"></div>
+    </body>
+
+    <script src="setup.js"></script>
+    <script src="manager.js"></script>
+
+    <script>
+        let filmDiv = document.getElementById('filmDivCont');
+        filmDiv.innerHTML = '';
+
+        for(i=0; i<filmSpaces.length;i++){
+            let thisSpace = filmSpaces[i];
+            filmDiv.innerHTML += "<div class='filmTile'><img src='"+thisSpace.dispImg+"'><div><h2>"+thisSpace.name+"</h2>"+thisSpace.shortDesc+"</div><a href='"+thisSpace.link+"'></a>";
+        }
+    </script>
+</html>
