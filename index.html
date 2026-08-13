@@ -3,6 +3,7 @@
     <head>
         <link rel="stylesheet" href="styleSheet.css">
         <link rel="icon" type="image/x-icon" href="graphics/webfavicon.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- Custom Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Limelight&family=Roboto:ital@0;1&display=swap" rel="stylesheet">
@@ -35,8 +36,8 @@
         <!-- Stylized Title -->
         <div class="stylizedTitle">
             <div style="text-align: center; padding:10px;">
-                <h1>The backdrop of your greatest ideas</h1>
-                Martinsound is a collection of highly-detailed film sets, just <b>9 miles east of Downtown LA</b>. Many of our sets feature a unique 70s / 80s style asthetic and flexible setups.
+                <h1 id="textCarosel">The set of your greatest ideas</h1>
+                Located just <u>9 miles east of Downton LA</u>, Martinsound Film Spaces offers 10 unique practical and standing sets with a nostalgic 60s-90s aesthetic. Deeply rooted in film history, this facility is a one-of-a-kind space for your one-of-a-kind film.
             </div>
         </div>
 
@@ -46,7 +47,7 @@
                 <div class="columnContainer">
                     <div>
                         <h2>Film Spaces</h2>
-                        Standing sets save time and money.  Film Spaces offer 25,000 Sq. Ft. of  unique areas for your production. 10 immersive retro film spaces, including our Abandoned 70s Apartment, NYC Metro Train, liminal 90s offices, vintage recording studios and soundstages, jail cell, Oval Office, creepy stockroom, and an 80s laboratory, all rentable by the hour.
+                        Martinsound offers ten immersive retro film spaces, including our Abandoned 70s Apartment, NYC Metro Train, liminal 90s offices, vintage recording studios and soundstages, jail cell, Oval Office, creepy stockroom, and an 80s laboratory, all <b>rentable by the hour</b>.
                         <p><a class="btn noLeft" href="filmspaces.html">Explore Film Spaces</a></p>
                     </div>
                     <img src="https://www.martinsound.com/wp-content/uploads/2020/03/DSC09659-1-600x400.jpg">
@@ -54,7 +55,7 @@
             </div>
 
             <div class="container filled centered">
-                <h2>A Filmspace dedicated to Filmmakers</h2>
+                <h2>A film space commited to film makers</h2>
                 <div class="portholeDiv">
                     <div>
                         <img src="https://www.martinsound.com/wp-content/uploads/2020/03/red-line-up-1536x864.png">
@@ -121,4 +122,24 @@
 
     <script src="setup.js"></script>
     <script src="manager.js"></script>
+
+    <script>
+        let textCarosel = document.getElementById('textCarosel');
+
+        let caroselText = [
+            'The set of your greatest ideas',
+            'The set of your wildest fantasies',
+            'The set of your imaginative stories',
+            'The set of your loudest promotions'
+        ]
+
+        var cIter = 0; 
+        function changeCarosel(){
+            textCarosel.innerHTML = caroselText[cIter];
+            cIter += 1; if(cIter >= caroselText.length){cIter = 0;}
+        }
+
+        changeCarosel();
+        setInterval(changeCarosel, 3000);
+    </script>
 </html>

@@ -3,6 +3,7 @@
     <head>
         <link rel="stylesheet" href="styleSheet.css">
         <link rel="icon" type="image/x-icon" href="graphics/webfavicon.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- Custom Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Limelight&family=Roboto:ital@0;1&display=swap" rel="stylesheet">
@@ -13,7 +14,7 @@
     </head>
 
     <style>
-        
+        .hotset {position:absolute; top:10px; left:10px; color:orange; width:fit-content; height:fit-content;}
     </style>
 
     <body>
@@ -23,7 +24,7 @@
         <!-- \/ Body Content -->
          <div class="container">
             <h1>Film Spaces</h1>
-            Explore our diverse selection of practical and standing sets. Many of our sets feature a unique 70s/80s asthetic and our newest set features a detailed subway train interior and station platform.
+            Explore our diverse selection of practical and standing retro sets with a nostalgic 60s-90s aesthetic. All of our spaces are rentable by the hour and we offer plenty of flexible arrangements for shoots of all sizes.
         </div>
         
         <div class="container">
@@ -51,7 +52,11 @@
 
         for(i=0; i<filmSpaces.length;i++){
             let thisSpace = filmSpaces[i];
-            filmDiv.innerHTML += "<div class='filmTile'><img src='"+thisSpace.dispImg+"'><div><h2>"+thisSpace.name+"</h2>"+thisSpace.shortDesc+"</div><a href='"+thisSpace.link+"'></a>";
+            filmDiv.innerHTML += "<div class='filmTile' id='set-"+i+"'><img src='"+thisSpace.dispImg+"'><div><h2>"+thisSpace.name+"</h2>"+thisSpace.shortDesc+"</div><a href='"+thisSpace.link+"'></a>";
+
+            if(Object.hasOwn(thisSpace, 'hotset')){
+                document.getElementById('set-'+i).innerHTML += "<h3 class='hotset'>🔥 Popular</h3>";
+            }
         }
     </script>
 </html>

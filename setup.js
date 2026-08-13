@@ -31,7 +31,7 @@ filmSpaces = []; var iter=-1;
     iter+=1; filmSpaces[iter] = {
         name: "New York Subway", link: "https://www.martinsound.com/subway/", bookingLink: "",
         dispImg: "https://www.martinsound.com/wp-content/uploads/2020/03/IMG_5553.png", 
-        shortDesc: "A full-scale New York City subway car and station.",
+        shortDesc: "A full-scale New York City subway car and station.", hotset:'true',
         tags: "",
         longDesc: ""
     }
@@ -39,7 +39,7 @@ filmSpaces = []; var iter=-1;
     iter+=1; filmSpaces[iter] = {
         name: "Abandonded Apartment", link: "https://www.martinsound.com/apartment/", bookingLink: "",
         dispImg: "https://www.martinsound.com/wp-content/uploads/2020/03/DSC00042-1024x576.jpg", 
-        shortDesc: "1970s vintage apartment with grungy wallpaper and stained carpets",
+        shortDesc: "1970s vintage apartment with grungy wallpaper and stained carpets", hotset:'true',
         tags: "",
         longDesc: ""
     }
